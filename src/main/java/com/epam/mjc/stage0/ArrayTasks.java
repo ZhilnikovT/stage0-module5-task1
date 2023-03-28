@@ -93,8 +93,7 @@ public class ArrayTasks {
         
         return arr;
     }
-    }
-
+    
     /**
      * Return new int[] array obtained from arr int[] array
      * by choosing positive numbers only.
