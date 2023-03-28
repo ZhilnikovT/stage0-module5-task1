@@ -80,7 +80,19 @@ public class ArrayTasks {
      * arr = ["pineapple", "apple", "pen"] -> ["pen", "apple", "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
-
+        public String[] reverseArray(String[] arr) {
+        int center = arr.length/2;
+        for (int i = 0; i < center; i++){
+            String current = arr[(arr.length - 1) - i];
+            arr[(arr.length - 1) - i] = arr[i];
+            arr[i] = current;
+        }
+//        for (int i = 0; i < arr.length; i++){
+//            System.out.println(arr[i]);
+//        }
+        
+        return arr;
+    }
     }
 
     /**
