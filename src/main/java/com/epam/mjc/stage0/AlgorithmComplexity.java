@@ -44,3 +44,15 @@ public class AlgorithmComplexity {
         return Complexity.O_N_2;
     }
 }
+
+    public Complexity binarySorting() {
+        return Complexity.O_LOG_N;
+    }
+
+    /**
+     * Return the complexity of the twoCycleSorting algorithm.
+     */
+    public Complexity twoCycleSorting() {
+        return Complexity.O_N_2;
+    }
+}
