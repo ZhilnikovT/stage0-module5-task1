@@ -64,7 +64,7 @@ public class ArrayTasks {
         for (int i = 0; i < arr.length; i++){
             
             if(arr[i] == number){
-                return i+1;
+                return i;
             }
         }
         return -1;
@@ -135,6 +135,6 @@ public class ArrayTasks {
      * arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-
+        return arr;
     }
 }
