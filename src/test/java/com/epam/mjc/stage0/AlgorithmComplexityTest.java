@@ -1,6 +1,6 @@
 package com.epam.mjc.stage0;
 
-//import com.epam.mjc.stage0.utils.Complexity;
+import com.epam.mjc.stage0.utils.Complexity;
 import java.util.Arrays;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.jupiter.api.Test;
