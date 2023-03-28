@@ -1,6 +1,6 @@
 package com.epam.mjc.stage0;
 
-import com.epam.mjc.stage0.utils.Complexity;
+//import com.epam.mjc.stage0.utils.Complexity;
 
 /**
  * Tasks for assessing the algorithm complexity.
@@ -33,18 +33,6 @@ public class AlgorithmComplexity {
     /**
      * Return the complexity of a binary search.
      */
-    public Complexity binarySorting() {
-        return Complexity.O_LOG_N;
-    }
-
-    /**
-     * Return the complexity of the twoCycleSorting algorithm.
-     */
-    public Complexity twoCycleSorting() {
-        return Complexity.O_N_2;
-    }
-}
-
     public Complexity binarySorting() {
         return Complexity.O_LOG_N;
     }
