@@ -1,6 +1,7 @@
 package com.epam.mjc.stage0;
 
 import com.epam.mjc.stage0.utils.Complexity;
+import java.util.Arrays;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.jupiter.api.Test;
 
@@ -10,12 +11,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AlgorithmComplexityTest {
 
-    private final List<String> encodedComplexities = List.of(
-            "9cc80a98d4710d85fad1faf9a39df9fe", //O_N_2
-            "48aaa3d74e0baf7767898171107e6749", //O_N
-            "689d093372f12bb7002c7ece2f4f9485", //O_LOG_N
-            "31b6eb924de49df799c3016cfea5a36b"  //O_1
-    );
+    //private final List<String> encodedComplexities = List.of(
+    private final List<String> encodedComplexities = Arrays.asList(new String[]{"9cc80a98d4710d85fad1faf9a39df9fe", "48aaa3d74e0baf7767898171107e6749", "689d093372f12bb7002c7ece2f4f9485", "31b6eb924de49df799c3016cfea5a36b"});
+    
+    
+//            "9cc80a98d4710d85fad1faf9a39df9fe", //O_N_2
+//            "48aaa3d74e0baf7767898171107e6749", //O_N
+//            "689d093372f12bb7002c7ece2f4f9485", //O_LOG_N
+//            "31b6eb924de49df799c3016cfea5a36b"  //O_1
+    //);
 
     private final AlgorithmComplexity algorithmComplexity = new AlgorithmComplexity();
 
