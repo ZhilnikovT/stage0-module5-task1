@@ -178,7 +178,7 @@ public class ArrayTasks {
             sortArray = f.sort(arr[i]);
             for(int j = 0; j < arr[i].length; j++){
                 arr[i][j] = sortArray[j];
-                System.out.println("arr[" + i + "] [" + j + "] = " + arr[i][j]);
+                //System.out.println("arr[" + i + "] [" + j + "] = " + arr[i][j]);
             }
         }
         
@@ -191,7 +191,7 @@ public class ArrayTasks {
         Foo f = new Foo();
         sortFline = f.sort(sortFline);
         for(int j = 0; j < sortFline.length; j++){
-                System.out.println("sortFline[" + j + "] = " + sortFline[j]);
+                //System.out.println("sortFline[" + j + "] = " + sortFline[j]);
             } 
         
         boolean[] c = new boolean[sortFline.length];
@@ -212,11 +212,11 @@ public class ArrayTasks {
             }
         }
         
-        for(int i = 0; i < arrOut.length; i++){
-            for(int j = 0; j < arrOut[i].length; j++){
-                System.out.println("arrOut[" + i + "] [" + j + "] = " + arrOut[i][j]);
-            }
-        }
+        //for(int i = 0; i < arrOut.length; i++){
+            //for(int j = 0; j < arrOut[i].length; j++){
+                //System.out.println("arrOut[" + i + "] [" + j + "] = " + arrOut[i][j]);
+            //}
+        //}
         
         return arrOut;
     }
