@@ -135,6 +135,89 @@ public class ArrayTasks {
      * arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-        return arr;
+          
+        class Foo {
+            public int[] sort(int[] arr1D) {
+                int[] newArr1D = new int[arr1D.length];
+                
+                boolean[] b = new boolean[arr1D.length];
+                for(int i = 0; i < newArr1D.length; i++){ b[i] = true; }
+                
+                int aMax, aMin, iMax = -1, iMin = -1;
+                int midle = newArr1D.length/2 + 1;
+                
+                for(int k = 0; k <= midle; k++){
+                    aMin = 2147483647;
+                    aMax = -2147483646;
+                    for(int i = 0; i < arr1D.length; i++){
+                        if(b[i]){
+                            if(aMax < arr1D[i]){
+                                aMax = arr1D[i];
+                                iMax = i;      
+                            }
+                            if(aMin > arr1D[i]){
+                                aMin = arr1D[i];
+                                iMin = i;      
+                            }
+                        }
+                    }
+                    if(aMin != 2147483647 || aMax != -2147483646){
+                        b[iMax] = false;
+                        b[iMin] = false;
+                        newArr1D[k] = aMin;
+                        newArr1D[arr1D.length - 1 - k] = aMax;
+                    }
+                }
+                return newArr1D;
+            }
+        };
+        
+        for(int i = 0; i < arr.length; i++){
+            int[] sortArray = new int[arr[i].length];
+            Foo f = new Foo();
+            sortArray = f.sort(arr[i]);
+            for(int j = 0; j < arr[i].length; j++){
+                arr[i][j] = sortArray[j];
+                System.out.println("arr[" + i + "] [" + j + "] = " + arr[i][j]);
+            }
+        }
+        
+        
+        int[] sortFline = new int[arr.length];
+
+        for(int j = 0; j < arr.length; j++){
+            sortFline[j] = arr[j].length;
+        }
+        Foo f = new Foo();
+        sortFline = f.sort(sortFline);
+        for(int j = 0; j < sortFline.length; j++){
+                System.out.println("sortFline[" + j + "] = " + sortFline[j]);
+            } 
+        
+        boolean[] c = new boolean[sortFline.length];
+        
+        
+        int[][] arrOut = new int[sortFline.length][];
+        for(int i = 0; i < arrOut.length; i++){ c[i] = true; }
+        
+        for(int i = 0; i < arrOut.length; i++){
+            for(int ii = 0; ii < arrOut.length; ii++){
+                if(sortFline[i] == arr[ii].length && c[ii]){
+                    arrOut[i] = new int[arr[ii].length]; 
+                    for(int j = 0; j < arr[ii].length; j++){
+                        arrOut[i][j] = arr[ii][j];
+                        c[ii] = false;
+                    }
+                }
+            }
+        }
+        
+        for(int i = 0; i < arrOut.length; i++){
+            for(int j = 0; j < arrOut[i].length; j++){
+                System.out.println("arrOut[" + i + "] [" + j + "] = " + arrOut[i][j]);
+            }
+        }
+        
+        return arrOut;
     }
 }
